@@ -9,6 +9,7 @@ class RequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         self._set_headers()
         if self.path.startswith("/teste",0):
+            
             self.wfile.write("<html><body><h1>No teste</h1></body></html>")    
         else:
             self.wfile.write("<html><body><h1>"+self.path+"</h1></body></html>")
